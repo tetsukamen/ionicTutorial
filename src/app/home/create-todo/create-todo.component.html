@@ -1,0 +1,13 @@
+<form *ngIf="createForm" [formGroup]="createForm" (ngSubmit)="createTodo(createForm.value)">
+  <ion-item>
+    <ion-label position="floating">name</ion-label>
+    <ion-input formControlName="name"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating">description</ion-label>
+    <ion-textarea formControlName="description"></ion-textarea>
+  </ion-item>
+  <ion-input type="file" accept="image/*" (change)="onChooseImage($event)"></ion-input>
+  <ion-button type="submit" expand="block">create todo</ion-button>
+</form>
+<ion-progress-bar *ngIf="progressRate>0 && progressRate<1" [value]="progressRate"></ion-progress-bar>

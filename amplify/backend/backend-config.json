@@ -1,0 +1,33 @@
+{
+  "auth": {
+    "ionictutorial7a284dee": {
+      "service": "Cognito",
+      "providerPlugin": "awscloudformation",
+      "dependsOn": [],
+      "customAuth": false
+    }
+  },
+  "api": {
+    "ionictutorial": {
+      "service": "AppSync",
+      "providerPlugin": "awscloudformation",
+      "output": {
+        "authConfig": {
+          "defaultAuthentication": {
+            "authenticationType": "AMAZON_COGNITO_USER_POOLS",
+            "userPoolConfig": {
+              "userPoolId": "authionictutorial7a284dee"
+            }
+          },
+          "additionalAuthenticationProviders": []
+        }
+      }
+    }
+  },
+  "storage": {
+    "ionicTutorial": {
+      "service": "S3",
+      "providerPlugin": "awscloudformation"
+    }
+  }
+}

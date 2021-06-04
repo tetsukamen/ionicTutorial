@@ -1,0 +1,11 @@
+{
+  "AppSyncApiName": "ionictutorial",
+  "DynamoDBBillingMode": "PAY_PER_REQUEST",
+  "DynamoDBEnableServerSideEncryption": false,
+  "AuthCognitoUserPoolId": {
+    "Fn::GetAtt": [
+      "authionictutorial7a284dee",
+      "Outputs.UserPoolId"
+    ]
+  }
+}
