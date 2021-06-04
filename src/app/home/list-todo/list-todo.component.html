@@ -1,7 +1,17 @@
 <div *ngIf="todos">
   <ion-card *ngFor="let todo of todos">
-    <amplify-s3-image [attr.img-key]="todo.imagekey" [attr.level]="todo.level">
-    </amplify-s3-image>
+    <ion-slides pager="true">
+      <ion-slide>
+        <amplify-s3-image [attr.img-key]="todo.imagekey" [attr.level]="todo.level">
+        </amplify-s3-image>
+      </ion-slide>
+      <ion-slide>
+        <h2>second slide</h2>
+      </ion-slide>
+      <ion-slide>
+        <h2>third slide slide</h2>
+      </ion-slide>
+    </ion-slides>
     <ion-card-header>
       <ion-card-title>{{todo.name}}</ion-card-title>
     </ion-card-header>
