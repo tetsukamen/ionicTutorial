@@ -7,4 +7,8 @@
     </ion-card-header>
     <ion-card-content>{{todo.description}}</ion-card-content>
   </ion-card>
+  <ion-infinite-scroll #infinitScroll threshold="100px" (ionInfinite)="loadNextTodos($event)">
+    <ion-infinite-scroll-content loadingSpinner="bubbles" loadingText="Loading more data...">
+    </ion-infinite-scroll-content>
+  </ion-infinite-scroll>
 </div>
